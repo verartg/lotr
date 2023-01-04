@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Routes, Route, Navigate } from 'react-router-dom';
+import Home from '../src/pages/home/Home';
+import Notfound from '../src/pages/notfound/Notfound';
+import Characters from '../src/pages/characters/Characters';
+import Quotes from '../src/pages/quotes/Quotes';
+import Testyourself from '../src/pages/testyourself/Testyourself';
+import Login from '../src/pages/login/Login';
+import Character from "./pages/character/Character";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+    return (
+            <Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/login" element={<Login/>}/>
+                <Route path="/characters" element={<Characters/>}/>
+                <Route path="/character/:id" element={<Character/>}/>
+                <Route path="/quotes" element={<Quotes/>}/>
+                <Route path="/testyourself" element={<Testyourself/>}/>
+                <Route path="*" element={<Notfound/>}/>
+            </Routes>
+    );
 }
 
 export default App;
