@@ -2,15 +2,27 @@ import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import {IoArrowBackOutline} from "react-icons/io5";
 import {Link} from "react-router-dom";
+// import SearchBar from "../../components/searchbar/Searchbar";
+
 
 const Characters = () => {
     const [error, toggleError] = useState(false);
     const [loading, toggleLoading] = useState(false);
     const [characters, setCharacters] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const [limit, setLimit] = useState(50);
-    const [numberCharacters, setNumberCharacters] = useState();
+    const [nrCharacters, setNrCharacters] = useState();
+  //  const [allCharacters, setAllCharacters] = useState([]);
+    const [limitPerPage, setLimitPerPage] = useState(50);
+    const [nrPages, setNrPages] = useState(19);
+  //  const [keyword, setKeyword] = useState('');
 
+   // const updateKeyword = (keyword) => {
+   //     const filtered = allCharacters.filter(characta => {
+   //         return `${characta.name.toLowerCase()}`.includes(keyword.toLowerCase());
+   //     })
+   //     setKeyword(keyword);
+   //     setAllCharacters(filtered);
+   // }
     useEffect(() => {
 
         const headers = {
@@ -22,17 +34,17 @@ const Characters = () => {
             toggleLoading(true);
             try {
                 toggleError(false);
-                const result = await axios.get(`https://the-one-api.dev/v2/character?page=${currentPage}&limit=${limit}`, {
+                const result = await axios.get(`https://the-one-api.dev/v2/character?page=${currentPage}&limit=${limitPerPage}`, {
                     headers: headers
                 });
-                const characters = result.data.docs;
-                setCharacters(characters);
-                const allCharacters = await axios.get(`https://the-one-api.dev/v2/character?page=${currentPage}&limit=1000`, {
+                setCharacters(result.data.docs);
+                const allData = await axios.get(`https://the-one-api.dev/v2/character`, {
                     headers: headers
                 });
-                const numberCharacters = allCharacters.data.docs;
-                setNumberCharacters(numberCharacters);
-
+  //              setAllCharacters(allData.data.docs);
+                setNrCharacters(allData.data.docs.length);
+                setLimitPerPage(50);
+                setNrPages(Math.ceil(nrCharacters/limitPerPage));
             } catch (e) {
                 console.error(e);
                 toggleError(true);
@@ -46,7 +58,6 @@ const Characters = () => {
 
     }, [currentPage]);
 
-
     return (
         <>
 
@@ -54,17 +65,18 @@ const Characters = () => {
             {loading && <span>Loading...</span>}
             <Link to="/"><IoArrowBackOutline/></Link>
             <div>
+
                 <ul>
                     {characters.map((character) => {
-                        return <p>{character.name}</p>
-                    })}
+                         return <p>{character.name}</p>
+//om deze weer door te linken naar de specifieke character pagina, moet ik vb van reddit erbij pakken!
+                     })}
                 </ul>
                 <button onClick={() => setCurrentPage(currentPage - 1)} disabled={currentPage === 1}>Prev</button>
-                <button onClick={() => setCurrentPage(currentPage + 1)} disabled={currentPage === Math.floor(numberCharacters / limit)}> Next</button>
+                <button onClick={() => setCurrentPage(currentPage + 1)} disabled={currentPage === nrPages}> Next</button>
             </div>
         </>
-
     );
-}
+}//<SearchBar keyword={keyword} onChange={updateKeyword} />
 
 export default Characters;
