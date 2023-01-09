@@ -1,11 +1,12 @@
-const Charactersfiltered = ({characters = []}) => {
+const CharactersFiltered = ({characters = []}) => {
     return (
         <div>
             {characters && characters.map((character) => {
-                return <p>{character.name}</p>
+                const { _id } = character
+                return <p key={_id}>{character.name}</p>
             })}
         </div>
     );
 };
 
-export default Charactersfiltered;
+export default CharactersFiltered;
