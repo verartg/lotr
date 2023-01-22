@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-
 function Character() {
     const { characterId } = useParams();
     const [character, setCharacter] = useState([]);
@@ -22,9 +21,8 @@ function Character() {
                 const response = await axios.get(`https://the-one-api.dev/v2/character/${characterId}`, {
                     headers: headers
                 });
-
-                setCharacter(response.data.docs);
-
+                setCharacter(response.data.docs[0]);
+                console.log(response.data.docs[0]);
             } catch (e) {
                 console.error(e);
                 toggleError(true);
@@ -42,14 +40,14 @@ console.log(character);
         <>
             {error && <span>Er is iets misgegaan met het ophalen van de data</span>}
             {loading && <span>Loading...</span>}
-            <h2>{character[0].name}</h2>
+            <h2>{character.name}</h2>
             <div>
-                <p>Gender: {character[0].gender}</p>
-                <p>Race: {character[0].race}</p>
-                <p>Realm: {character[0].realm}</p>
-                <p>Spouse: {character[0].spouse}</p>
+                <p>Gender: {character.gender}</p>
+                <p>Race: {character.race}</p>
+                <p>Realm: {character.realm}</p>
+                <p>Spouse: {character.spouse}</p>
             </div>
-            <a href={character[0].wikiUrl}><p>Go to wiki page</p></a>
+            <a href={character.wikiUrl}><p>Go to wiki page</p></a>
         </>
     );
 }

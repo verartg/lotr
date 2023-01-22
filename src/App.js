@@ -6,6 +6,7 @@ import Quotes from '../src/pages/quotes/Quotes';
 import Testyourself from '../src/pages/testyourself/Testyourself';
 import Login from '../src/pages/login/Login';
 import Character from "./pages/character/Character";
+// import Signup from "./pages/signup/Signup";
 function App() {
 
 
@@ -13,6 +14,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/login" element={<Login/>}/>
+                {/*<Route path="signup" element={<Signup/>}/>*/}
                 <Route path="/characters" element={<Characters/>}/>
                 <Route path="/character/:characterId" element={<Character/>}/>
                 <Route path="/quotes" element={<Quotes/>}/>
