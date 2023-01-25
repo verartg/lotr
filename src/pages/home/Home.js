@@ -3,14 +3,13 @@ import { Link } from 'react-router-dom';
 import {AuthContext} from "../../context/AuthContext";
 
 function Home() {
-    const {isAuth, logout} = useContext(AuthContext);
+    const {user, logout} = useContext(AuthContext);
 
     return (
         <>
-            {isAuth ?
-                <form onSubmit={logout}><button type="submit">log out</button></form> :
-                <Link to="/login"><button>log in</button></Link>}
-            {/*<img/>*/}
+            <h1>Hello {user}</h1>
+            {/*<img/> hier moet nog een onclick, dropdownmenu met uitlog knop komen*/}
+            <button onClick={logout}>Log out</button>
             <section>
                 <Link to="/characters">
                     <button>Characters</button>

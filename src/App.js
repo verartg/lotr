@@ -6,19 +6,21 @@ import Quotes from '../src/pages/quotes/Quotes';
 import Testyourself from '../src/pages/testyourself/Testyourself';
 import Login from '../src/pages/login/Login';
 import Character from "./pages/character/Character";
-// import Signup from "./pages/signup/Signup";
+import Signup from "./pages/signup/Signup";
+import {useContext} from "react";
+import {AuthContext} from "./context/AuthContext";
 function App() {
-
+    const {isAuth} = useContext(AuthContext);
 
     return (
             <Routes>
-                <Route path="/" element={<Home/>}/>
+                <Route path="/" element={isAuth ? <Home/> : <Navigate to="/signup"/>}/>
                 <Route path="/login" element={<Login/>}/>
-                {/*<Route path="signup" element={<Signup/>}/>*/}
-                <Route path="/characters" element={<Characters/>}/>
-                <Route path="/character/:characterId" element={<Character/>}/>
-                <Route path="/quotes" element={<Quotes/>}/>
-                <Route path="/testyourself" element={<Testyourself/>}/>
+                <Route path="signup" element={<Signup/>}/>
+                <Route path="/characters" element={isAuth ? <Characters/> : <Navigate to="/signup"/>}/>
+                <Route path="/character/:characterId" element={isAuth ? <Character/> : <Navigate to="/signup"/>}/>
+                <Route path="/quotes" element={isAuth ? <Quotes/> : <Navigate to="/signup"/>}/>
+                <Route path="/testyourself" element={isAuth ? <Testyourself/> : <Navigate to="/signup"/>}/>
                 <Route path="*" element={<Notfound/>}/>
             </Routes>
     );
