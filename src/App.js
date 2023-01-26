@@ -9,6 +9,7 @@ import Character from "./pages/character/Character";
 import Signup from "./pages/signup/Signup";
 import {useContext} from "react";
 import {AuthContext} from "./context/AuthContext";
+import Testyourself2 from "./pages/testyourself/testyourself2";
 function App() {
     const {isAuth} = useContext(AuthContext);
 
@@ -21,6 +22,7 @@ function App() {
                 <Route path="/character/:characterId" element={isAuth ? <Character/> : <Navigate to="/signup"/>}/>
                 <Route path="/quotes" element={isAuth ? <Quotes/> : <Navigate to="/signup"/>}/>
                 <Route path="/testyourself" element={isAuth ? <Testyourself/> : <Navigate to="/signup"/>}/>
+                <Route path="/testyourself2" element={isAuth ? <Testyourself2/> : <Navigate to="/signup"/>}/>
                 <Route path="*" element={<Notfound/>}/>
             </Routes>
     );
