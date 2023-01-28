@@ -10,6 +10,7 @@ import Signup from "./pages/signup/Signup";
 import {useContext} from "react";
 import {AuthContext} from "./context/AuthContext";
 import Testyourself2 from "./pages/testyourself/testyourself2";
+import './App.css';
 function App() {
     const {isAuth} = useContext(AuthContext);
 

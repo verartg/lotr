@@ -1,0 +1,40 @@
+/*fonts*/
+
+/*colours*/
+:root {
+    --brown: #3D2529;
+    --beige: #EEE8E9;
+    --blue: #051939;
+    --green: #253021;
+    --light-green: #E3E7E3;
+    --yellow: #A77E33;
+    --grey: #6B6B6B;
+    --dark-grey: #2D2E2D;
+}
+/*headers*/
+
+/*p*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    line-height: calc(1em + 0.5rem);
+    text-decoration: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}

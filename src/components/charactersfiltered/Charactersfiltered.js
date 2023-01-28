@@ -1,4 +1,4 @@
-import './Charactersfiltered.css'
+import './Charactersfiltered.module.css'
 import {Link} from "react-router-dom";
 
 const CharactersFiltered = ({characters = []}) => {

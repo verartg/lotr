@@ -1,57 +1,63 @@
-import React, {useEffect, useState} from 'react';
-import Aragorn from "../../assets/characters/Aragorn.jpg";
-import Arwen from "../../assets/characters/Arwen.webp";
-import Azog from "../../assets/characters/Azog.jpg";
-import Balin from "../../assets/characters/Balin.webp";
-import BardII from "../../assets/characters/BardII.jpg";
-import Beorn from "../../assets/characters/Beorn.webp";
-// import Bifur from "../../assets/characters/Bifur.webp";
-// import BilboBaggins from "../../assets/characters/BilboBaggins.webp";
-// import Bofur from "../../assets/characters/Bofur.webp";
-// import Bombur from "../../assets/characters/Bombur.webp";
-// import Boromir from "../../assets/characters/Boromir.webp";
-// import Celeborn from "../../assets/characters/Celeborn.webp";
-// import DenethorII from "../../assets/characters/DenethorII.webp";
-// import Dori from "../../assets/characters/Dori.webp";
-// import Dwalin from "../../assets/characters/Dwalin.webp";
-// import Elrond from "../../assets/characters/Elrond.webp";
-// import Éomer from "../../assets/characters/Éomer.webp";
-// import Éowyn from "../../assets/characters/Éowyn.webp";
-// import Faramir from "../../assets/characters/Faramir.webp";
-// import FíliandKíli from "../../assets/characters/FíliandKíli.jpg";
-// import FrodoBaggins from "../../assets/characters/FrodoBaggins.webp";
-// import Galadriel from "../../assets/characters/Galadriel.webp";
-// import Gandalf from "../../assets/characters/Gandalf.webp";
-// import Gimli from "../../assets/characters/Gimli.webp";
-// import Glóin from "../../assets/characters/Glóin.webp";
-// import Gollum from "../../assets/characters/Gollum.webp";
-// import GreatGoblin from "../../assets/characters/GreatGoblin.webp";
-// import GrímaWormtongue from "../../assets/characters/GrímaWormtongue.jpg";
-// import Haldir_Lorien from "../../assets/characters/Haldir_Lorien.webp";
-// import Legolas from "../../assets/characters/Legolas.jpg";
-// import MerryGamgee from "../../assets/characters/MerryGamgee.webp";
-// import Nori from "../../assets/characters/Nori.webp";
-// import Óin from "../../assets/characters/Óin.webp";
-// import Ori from "../../assets/characters/Ori.webp";
-// import PippinGamgee from "../../assets/characters/PippinGamgee.webp";
-// import Radagast from "../../assets/characters/Radagast.jpg";
-// import SamwiseGamgee from "../../assets/characters/SamwiseGamgee.jpg";
-// import Saruman from "../../assets/characters/Saruman.jpg";
-// import Smaug from "../../assets/characters/Smaug.webp";
-// import Tauriel from "../../assets/characters/Tauriel.webp";
-// import Théoden from "../../assets/characters/Théoden.jpg";
-// import Thorin from "../../assets/characters/Thorin.webp";
-// import Thranduil from "../../assets/characters/Thranduil.webp";
-// import Treebeard from "../../assets/characters/Treebeard.webp";
+//name meegeven in object voor alt img
 
+import React, {useEffect, useState} from 'react';
+import Aragorn from "../../assets/characterImages/Aragorn.jpg";
+import Arwen from "../../assets/characterImages/Arwen.webp";
+import Azog from "../../assets/characterImages/Azog.jpg";
+import Balin from "../../assets/characterImages/Balin.webp";
+import BardII from "../../assets/characterImages/BardII.jpg";
+import Beorn from "../../assets/characterImages/Beorn.webp";
+import Bifur from "../../assets/characterImages/Bifur.webp";
+import BilboBaggins from "../../assets/characterImages/BilboBaggins.webp";
+import Bofur from "../../assets/characterImages/Bofur.webp";
+import Bombur from "../../assets/characterImages/Bombur.webp";
+import Boromir from "../../assets/characterImages/Boromir.webp";
+import Celeborn from "../../assets/characterImages/Celeborn.webp";
+import DenethorII from "../../assets/characterImages/DenethorII.webp";
+import Dori from "../../assets/characterImages/Dori.webp";
+import Dwalin from "../../assets/characterImages/Dwalin.webp";
+import Elrond from "../../assets/characterImages/Elrond.webp";
+import Éomer from "../../assets/characterImages/Éomer.webp";
+import Éowyn from "../../assets/characterImages/Éowyn.webp";
+import Faramir from "../../assets/characterImages/Faramir.webp";
+import FíliandKíli from "../../assets/characterImages/FíliandKíli.jpg";
+import FrodoBaggins from "../../assets/characterImages/FrodoBaggins.webp";
+import Galadriel from "../../assets/characterImages/Galadriel.webp";
+import Gandalf from "../../assets/characterImages/Gandalf.webp";
+import Gimli from "../../assets/characterImages/Gimli.webp";
+import Glóin from "../../assets/characterImages/Glóin.webp";
+import Gollum from "../../assets/characterImages/Gollum.webp";
+import GreatGoblin from "../../assets/characterImages/GreatGoblin.webp";
+import GrímaWormtongue from "../../assets/characterImages/GrímaWormtongue.jpg";
+import Haldir_Lorien from "../../assets/characterImages/Haldir_Lorien.webp";
+import Legolas from "../../assets/characterImages/Legolas.jpg";
+import MerryGamgee from "../../assets/characterImages/MerryGamgee.webp";
+import Nori from "../../assets/characterImages/Nori.webp";
+import Óin from "../../assets/characterImages/Óin.webp";
+import Ori from "../../assets/characterImages/Ori.webp";
+import PippinGamgee from "../../assets/characterImages/PippinGamgee.webp";
+import Radagast from "../../assets/characterImages/Radagast.jpg";
+import SamwiseGamgee from "../../assets/characterImages/SamwiseGamgee.jpg";
+import Saruman from "../../assets/characterImages/Saruman.jpg";
+import Smaug from "../../assets/characterImages/Smaug.webp";
+import Théoden from "../../assets/characterImages/Théoden.jpg";
+import Thorin from "../../assets/characterImages/Thorin.webp";
+import Thranduil from "../../assets/characterImages/Thranduil.webp";
+import Treebeard from "../../assets/characterImages/Treebeard.webp";
+import axios from "axios";
+import CharacterInformation from "../../components/characterInformation/CharacterInformation";
 function Testyourself2() {
     const [image, setImage] = useState();
-    const [id, setId] = useState();
     const [error, toggleError] = useState(false);
     const [loading, toggleLoading] = useState(false);
     const [clicked, setClicked] = useState(0);
+    const [character, setCharacter] = useState();
 
     useEffect(() => {
+        const headers = {
+            'Accept': 'application/json',
+            'Authorization': 'Bearer FD_28OTI7VOOTV6kadUH'
+        }
         async function getImage() {
             toggleLoading(true);
             try {
@@ -81,10 +87,166 @@ function Testyourself2() {
                         "image": Beorn,
                         "id": "5cd99d4bde30eff6ebccfc2c"
                     },
+                    {
+                        "image": Bifur,
+                        "id": "5cd99d4bde30eff6ebccfc37"
+                    },
+                    {
+                        "image": BilboBaggins,
+                        "id": "5cd99d4bde30eff6ebccfc38"
+                    },
+                    {
+                        "image": Bofur,
+                        "id": "5cd99d4bde30eff6ebccfc4f"
+                    },
+                    {
+                        "image": Bombur,
+                        "id": "5cd99d4bde30eff6ebccfc54"
+                    },
+                    {
+                        "image": Boromir,
+                        "id": "5cd99d4bde30eff6ebccfc54"
+                    },
+                    {
+                        "image": Celeborn,
+                        "id": "5cd99d4bde30eff6ebccfc7e"
+                    },
+                    {
+                        "image": DenethorII,
+                        "id": "5cd99d4bde30eff6ebccfc9a"
+                    },
+                    {
+                        "image": Dori,
+                        "id": "5cd99d4bde30eff6ebccfc9f"
+                    },
+                    {
+                        "image": Dwalin,
+                        "id": "5cd99d4bde30eff6ebccfca4"
+                    },
+                    {
+                        "image": Elrond,
+                        "id": "5cd99d4bde30eff6ebccfcc8"
+                    },
+                    {
+                        "image": Éomer,
+                        "id": "5cdbdecb6dc0baeae48cfa5a"
+                    },
+                    {
+                        "image": Éowyn,
+                        "id": "5cdbdecb6dc0baeae48cfa59"
+                    },
+                    {
+                        "image": Faramir,
+                        "id": "5cd99d4bde30eff6ebccfcef"
+                    },
+                    {
+                        "image": FíliandKíli,
+                        "id": "5cd99d4bde30eff6ebccfd04"
+                    },
+                    {
+                        "image": FrodoBaggins,
+                        "id": "5cd99d4bde30eff6ebccfc15"
+                    },
+                    {
+                        "image": Galadriel,
+                        "id": "5cd99d4bde30eff6ebccfd06"
+                    },
+                    {
+                        "image": Gandalf,
+                        "id": "5cd99d4bde30eff6ebccfea0"
+                    },
+                    {
+                        "image": Gimli,
+                        "id": "5cd99d4bde30eff6ebccfd23"
+                    },
+                    {
+                        "image": Glóin,
+                        "id": "5cd99d4bde30eff6ebccfd2b"
+                    },
+                    {
+                        "image": Gollum,
+                        "id": "5cd99d4bde30eff6ebccfe9e"
+                    },
+                    {
+                        "image": GreatGoblin,
+                        "id": "5cdbdecb6dc0baeae48cfa95"
+                    },
+                    {
+                        "image": GrímaWormtongue,
+                        "id": "5cd99d4bde30eff6ebccfe9d"
+                    },
+                    {
+                        "image": Haldir_Lorien,
+                        "id": "5cd99d4bde30eff6ebccfd42"
+                    },
+                    {
+                        "image": Legolas,
+                        "id": "5cd99d4bde30eff6ebccfd81"
+                    },
+                    {
+                        "image": MerryGamgee,
+                        "id": "5cd99d4bde30eff6ebccfc7c"
+                    },
+                    {
+                        "image": Nori,
+                        "id": "5cd99d4bde30eff6ebccfdc4"
+                    },
+                    {
+                        "image": Óin,
+                        "id": "5cd99d4bde30eff6ebccfe55"
+                    },
+                    {
+                        "image": Ori,
+                        "id": "5cd99d4bde30eff6ebccfdca"
+                    },
+                    {
+                        "image": PippinGamgee,
+                        "id": "5cd99d4bde30eff6ebccfe2e"
+                    },
+                    {
+                        "image": Radagast,
+                        "id": "5cd99d4bde30eff6ebccfea1"
+                    },
+                    {
+                        "image": SamwiseGamgee,
+                        "id": "5cd99d4bde30eff6ebccfd0d"
+                    },
+                    {
+                        "image": Saruman,
+                        "id": "5cd99d4bde30eff6ebccfea4"
+                    },
+                    {
+                        "image": Smaug,
+                        "id": "5cdbdecb6dc0baeae48cfa42"
+                    },
+                    {
+                        "image": Théoden,
+                        "id": "5cd99d4bde30eff6ebccfe19"
+                    },
+                    {
+                        "image": Thorin,
+                        "id": "5cd99d4bde30eff6ebccfe15"
+                    },
+                    {
+                        "image": Thranduil,
+                        "id": "5cd99d4bde30eff6ebccfe13"
+                    },
+                    {
+                        "image": Treebeard,
+                        "id": "5cd9d533844dc4c55e47afed"
+                    }
+
                 ];
                 const randomNr = Math.floor(Math.random() * images.length);
                 setImage(images[randomNr].image);
-                setId(images[randomNr].id);
+                const characterId = (images[randomNr].id);
+                const characterInfo = await axios.get(`https://the-one-api.dev/v2/character/${characterId}`, {
+                    headers: headers
+                });
+                console.log(characterInfo);
+                setCharacter(characterInfo.data.docs[0]);
+                console.log(characterInfo.data.docs[0]);
+
             } catch (e) {
                 console.error(e);
                 toggleError(true);
@@ -106,10 +268,9 @@ function Testyourself2() {
             {error && <span>Er is iets misgegaan met het ophalen van de data</span>}
             {loading && <span>Loading...</span>}
             <div onClick={() => setClicked(clicked + 1)}>
-                <img src={image} alt="image character"/>{id}
-                {clicked === 1 && <div><p>Hier komt de character info</p></div>}
+                <img src={image} alt="image character"/>
+                {clicked === 1 && <CharacterInformation character={character}/>}
                 {clicked === 2 && refreshPage()}
-
             </div>
         </>
     );

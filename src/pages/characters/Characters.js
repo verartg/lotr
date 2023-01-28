@@ -3,6 +3,7 @@
 // ik set Race en Realm niet(ik weet niet hoe), waardoor ik soms niet kan clearen. dit is het geval wanneer er geen realm/race te kiezen valt. dan ververst 'ie niet.
 //I probably need to use more components.
 //I need pagination
+//accenten gevoeligheid uitzetten.
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import {IoArrowBackOutline} from "react-icons/io5";
@@ -96,7 +97,7 @@ console.log(characters);
 // Inside the useEffect, we are checking if the race filter and realm filter is applied. We have a not check (!race and !realm), so that we can apply the filter only if that particular filter is selected.
 //     useEffect(() => {
 //         setCharacters(
-//             characters.filter(character => {
+//             characterImages.filter(character => {
 //                 return (
 //                     (!race || race === character.race) && (!realm || realm === character.realm)
 //                 )

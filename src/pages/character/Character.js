@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import CharacterInformation from "../../components/characterInformation/CharacterInformation";
 
 function Character() {
     const { characterId } = useParams();
@@ -40,14 +41,7 @@ console.log(character);
         <>
             {error && <span>Er is iets misgegaan met het ophalen van de data</span>}
             {loading && <span>Loading...</span>}
-            <h2>{character.name}</h2>
-            <div>
-                <p>Gender: {character.gender}</p>
-                <p>Race: {character.race}</p>
-                <p>Realm: {character.realm}</p>
-                <p>Spouse: {character.spouse}</p>
-            </div>
-            <a href={character.wikiUrl}><p>Go to wiki page</p></a>
+            <CharacterInformation character={character}/>
         </>
     );
 }

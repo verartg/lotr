@@ -35,7 +35,6 @@ function Quotes() {
                     console.log(characterInfo);
                     setCharacter(characterInfo.data.docs[0].name);
 
-
                 } catch (e) {
                     console.error(e);
                     toggleError(true);
