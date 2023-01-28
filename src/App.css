@@ -10,20 +10,26 @@
     --yellow: #A77E33;
     --grey: #6B6B6B;
     --dark-grey: #2D2E2D;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-/*headers*/
-
-/*p*/
 
 * {
     box-sizing: border-box;
-    margin: 0;
     line-height: calc(1em + 0.5rem);
     text-decoration: none;
+    margin: 0;
+    padding: 0
 }
 
 html, body {
     height: 100%;
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
 }
 
 ul {

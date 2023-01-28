@@ -4,6 +4,7 @@
 //I probably need to use more components.
 //I need pagination
 //accenten gevoeligheid uitzetten.
+import styles from './Characters.module.css';
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import {IoArrowBackOutline} from "react-icons/io5";
