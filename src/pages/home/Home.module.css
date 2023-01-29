@@ -1,3 +1,4 @@
+
 .elvish {
     font-family: 'elvish', sans-serif;
     color: var(--beige);
@@ -36,7 +37,6 @@
     width: 80vw;
     max-width: 500px;
     min-height: 65px;
-    background-color: var(--beige);
     border-radius: 3px;
     box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
 }

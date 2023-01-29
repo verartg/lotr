@@ -1,10 +1,10 @@
 import React, {useContext} from 'react';
-import {Link} from 'react-router-dom';
 import {AuthContext} from "../../context/AuthContext";
 import './Home.module.css';
 import lotrlogo from '../../assets/lotrlogo.png';
 import placeholderphoto from '../../assets/placeholderphoto.jpeg';
 import styles from './Home.module.css';
+import Button from "../../components/button/Button";
 
 function Home() {
     const {user, logout} = useContext(AuthContext);
@@ -29,21 +29,15 @@ function Home() {
                     <div className="inner-content-container">
                         <img className="logo" src={lotrlogo} alt="Lord of the Rings logo"/>
                         <section className={styles.menu}>
-                            <Link to="/characters">
-                                <article className={styles.button}>
-                                    <p>Characters</p>
-                                </article>
-                            </Link>
-                            <Link to="/quotes">
-                                <article className={styles.button}>
-                                    <p>Quotes</p>
-                                </article>
-                            </Link>
-                            <Link to="/testyourself">
-                                <article className={styles.button}>
-                                    <p>Test yourself</p>
-                                </article>
-                            </Link>
+                            <Button backgroundColor="#efebec" uri={"/characters"}>
+                                <p>Characters</p>
+                            </Button>
+                            <Button backgroundColor="#efebec" uri={"/quotes"}>
+                                <p>Quotes</p>
+                            </Button>
+                            <Button backgroundColor="#efebec" uri={"/testyourself"}>
+                                <p>Test yourself</p>
+                            </Button>
                         </section>
                     </div>
                 </div>
