@@ -1,64 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Roboto+Condensed:wght@300;400;700&display=swap');
-@import url('https://fonts.cdnfonts.com/css/elvish');
-h2 {
+.elvish {
     font-family: 'elvish', sans-serif;
     color: var(--beige);
     font-weight: 400;
 }
 
-body {
-    background-color: var(--brown);
-}
-
-header {
-    margin-top: 30px;
-    width: 100%;
-}
-
-.margindiv {
-    margin: 0 30px;
-}
-
-nav {
-    display: flex;
-    width: 100%;
-}
-
-ul {
+.ul {
+    padding: 10px 0;
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-ol {
+.menu {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 1;
+    flex-grow: 1;
+    margin: 10px 0;
 }
 
+.logo {
+    width: 80vw;
+    align-self: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
 
-menu {
+.button {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 85px;
-    flex-wrap: wrap;
-}
-
-section {
-    width: 100%;
-}
-
-button {
-    display: block;
-    width: 96.5%;
-    height: 100px;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    max-width: 500px;
+    min-height: 65px;
     background-color: var(--beige);
-    margin: 10px;
     border-radius: 3px;
-    box-shadow: 4px 0 4px #0000;
-}
-
-p {
-    font-size: 26px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
 }

@@ -1,0 +1,26 @@
+
+.arrow {
+    margin: 20px 0;
+    width: 25px;
+}
+.jrrt {
+    width: 35vw;
+    align-self: center;
+}
+
+.quote {
+    text-align: center;
+    font-size: 15px;
+    margin: 20px 0;
+}
+
+.author {
+    text-align: right;
+    font-size: 13px;
+}
+.footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%
+}
+

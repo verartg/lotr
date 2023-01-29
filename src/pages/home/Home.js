@@ -11,44 +11,42 @@ function Home() {
 
     return (
         <>
-            <header>
-                <div className={styles.margindiv}>
-                    <div className={styles.nav}>
-                        <ul>
-                            <h2 className={styles.elvish}>Hello {user}!</h2>
-                            {/*<img/> hier moet nog een onclick, dropdownmenu met uitlog knop komen*/}
-                            <img src={placeholderphoto} alt="placeholder for personalised avatar" style={{
-                                width: 40,
-                                height: 40,
-                                borderRadius: 40 / 2
-                            }} onClick={logout}/>
-                        </ul>
-                    </div>
+            <header className="outer-content-container">
+                <div className="inner-content-container">
+                    <ul className={styles.ul}>
+                        <h2 className={styles.elvish}>Hello {user}!</h2>
+                        {/*<img/> hier moet nog een onclick, dropdownmenu met uitlog knop komen*/}
+                        <img src={placeholderphoto} alt="placeholder for personalised avatar" style={{
+                            width: 40,
+                            height: 40,
+                            borderRadius: 40 / 2
+                        }} onClick={logout}/>
+                    </ul>
                 </div>
             </header>
             <main>
-                <div className={styles.margindiv}>
-                    <img src={lotrlogo} alt="Lord of the Rings logo"/>
-                </div>
-                <section>
-                    <div className={styles.margindiv}>
-                        <div className={styles.menu}>
-                            <ol>
-                                <Link to="/characters">
-                                    <button>
-                                        <p>Characters</p>
-                                    </button>
-                                </Link>
-                                <Link to="/quotes">
-                                    <button><p>Quotes</p></button>
-                                </Link>
-                                <Link to="/testyourself">
-                                    <button><p>Test yourself</p></button>
-                                </Link>
-                            </ol>
-                        </div>
+                <div className="outer-content-container">
+                    <div className="inner-content-container">
+                        <img className="logo" src={lotrlogo} alt="Lord of the Rings logo"/>
+                        <section className={styles.menu}>
+                            <Link to="/characters">
+                                <article className={styles.button}>
+                                    <p>Characters</p>
+                                </article>
+                            </Link>
+                            <Link to="/quotes">
+                                <article className={styles.button}>
+                                    <p>Quotes</p>
+                                </article>
+                            </Link>
+                            <Link to="/testyourself">
+                                <article className={styles.button}>
+                                    <p>Test yourself</p>
+                                </article>
+                            </Link>
+                        </section>
                     </div>
-                </section>
+                </div>
             </main>
         </>
     );
