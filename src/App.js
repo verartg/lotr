@@ -18,10 +18,10 @@ function App() {
     return (
             <Routes>
                 <Route path="/" element={isAuth ? <Layout backgroundColor="#3D2529"><Home/></Layout> : <Navigate to="/signup"/>}/>
-                <Route path="/login" element={<Layout backgroundColor="#051939"><Login/></Layout>}/>
-                <Route path="signup" element={<Layout backgroundColor="#051939"><Signup/></Layout>}/>
+                <Route path="/login" element={<Layout backgroundColor="#091121"><Login/></Layout>}/>
+                <Route path="signup" element={<Layout backgroundColor="#091121"><Signup/></Layout>}/>
                 <Route path="/characters" element={isAuth ? <Layout backgroundColor="#253021"><Characters/></Layout> : <Navigate to="/signup"/>}/>
-                <Route path="/character/:characterId" element={isAuth ? <Layout backgroundColor="#6B6B6B"><Character/></Layout> : <Navigate to="/signup"/>}/>
+                <Route path="/character/:characterId" element={isAuth ? <Layout backgroundColor="#2D2E2D"><Character/></Layout> : <Navigate to="/signup"/>}/>
                 <Route path="/quotes" element={isAuth ? <Layout backgroundColor="#deeade"> <Quotes/> </Layout> : <Navigate to="/signup"/>}/>
                 <Route path="/testyourself" element={isAuth ? <Layout backgroundColor="#6B6B6B"><Testyourself/></Layout> : <Navigate to="/signup"/>}/>
                 <Route path="/testyourself2" element={isAuth ? <Layout backgroundColor="#6B6B6B"><Testyourself2/></Layout> : <Navigate to="/signup"/>}/>

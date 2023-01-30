@@ -2,7 +2,6 @@ import {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 import axios from "axios";
 import tolkien from '../../assets/jrrtolkien.png';
-import {IoArrowBackOutline} from "react-icons/io5";
 import footerfellowship from '../../assets/footerfellowship.png';
 import styles from './Quotes.module.css';
 import arrowback from '../../assets/arrowback.svg'
@@ -55,9 +54,7 @@ function Quotes() {
         <>
             <header className="outer-content-container">
                 <div className="inner-content-container">
-
                     <Link to="/"><img src={arrowback} alt="arrow to go back" className={styles.arrow}/></Link>
-
                 </div>
             </header>
             <main>
@@ -78,7 +75,7 @@ function Quotes() {
                     </div>
                 </div>
             </main>
-            <footer className={styles.footer}>
+            <footer>
                 <img src={footerfellowship} alt="footer outline of the fellowship of the ring"/>
             </footer>
         </>

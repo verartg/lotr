@@ -1,3 +1,4 @@
+/*inheriting colour of text for a:visited doesn't work*/
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Roboto+Condensed:wght@300;400;700&display=swap');
 @import url('https://fonts.cdnfonts.com/css/elvish');
 
@@ -8,14 +9,11 @@
     margin: 0;
 }
 
-a:visited {
-    text-decoration: none;
-    color: #3D2529;
-}
 :root {
     --brown: #3D2529;
     --beige: #efebec;
-    --blue: #051939;
+    --blue: #091121;
+    --light-blue: #C5CCE7;
     --green: #253021;
     --light-green: #deeade;
     --yellow: #A77E33;
@@ -23,8 +21,12 @@ a:visited {
     --dark-grey: #2D2E2D;
 }
 
+.App {
+    height: 100vh;
+}
+
 html, body {
-    min-height: 100vw;
+    height: 100vh;
     font-family: 'Quicksand', sans-serif
 }
 
@@ -33,6 +35,15 @@ main {
     flex-grow: 1;
     flex-shrink: 1;
 }
+
+footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    display: grid;
+    place-content: center;
+}
+
 .layout {
     min-height: 100vh;
 }
@@ -48,7 +59,7 @@ main {
 /*De binnenste container is maximaal 1400px breed, zodat het er ook goed uitziet op brede schermen.
 Hij mag krimpen als het scherm minder breed wordt, maar niet groeien als er meer ruimte is.*/
 .inner-content-container {
-    flex-basis: 600px;
+    flex-basis: 400px;
     flex-shrink: 1;
     flex-grow: 0;
     /*We voegen margin toe aan de linker- en rechterkant, zodat de content nooit helemaal tegen de rand gedrukt kan worden*/
@@ -70,6 +81,11 @@ img, picture, video, canvas, svg {
 
 input, button, textarea, select {
     font: inherit;
+}
+
+a :visited {
+    text-decoration: none;
+    color: inherit;
 }
 
 p {

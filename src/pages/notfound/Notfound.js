@@ -1,7 +1,6 @@
 import React from 'react';
 import confusedgandalf from '../../assets/confusedgandalf.gif';
 import styles from './Notfound.module.css'
-import {Link} from "react-router-dom";
 import Button from "../../components/button/Button";
 function Notfound() {
     return (

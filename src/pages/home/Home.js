@@ -1,3 +1,4 @@
+/*<img/> er moet nog een onclick, dropdownmenu met uitlog knop komen*/
 import React, {useContext} from 'react';
 import {AuthContext} from "../../context/AuthContext";
 import './Home.module.css';
@@ -15,7 +16,6 @@ function Home() {
                 <div className="inner-content-container">
                     <ul className={styles.ul}>
                         <h2 className={styles.elvish}>Hello {user}!</h2>
-                        {/*<img/> hier moet nog een onclick, dropdownmenu met uitlog knop komen*/}
                         <img src={placeholderphoto} alt="placeholder for personalised avatar" style={{
                             width: 40,
                             height: 40,

@@ -2,6 +2,8 @@ import React, {useContext, useState} from 'react';
 import {Link, useNavigate} from "react-router-dom";
 import {AuthContext} from "../../context/AuthContext";
 import axios from "axios";
+import styles from "../signup/Signup.module.css"
+import Tree from "../../assets/Tree.jpg";
 
 
 function Login() {
@@ -18,35 +20,41 @@ function Login() {
             })
             // console.log(response)
             console.log(e.response)
-            login( response.data.accessToken )
+            login(response.data.accessToken)
         } catch (e) {
             console.error(e)
             //stukje state aanmaken om de errors in de ui te loggen.
         }
     }
+
     return (
-        <>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="username">
-                    <input
-                        id="username"
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
-                        name="username"
-                        placeholder="Username"/>
-                </label>
-                <label htmlFor="password">
-                    <input
-                        id="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        name="password"
-                        placeholder="Password"/>
-                </label>
-                <button type="submit">Log in</button>
-        </form>
-            <div>Not yet registered? <Link to="/signup">Sign up</Link></div>
-        </>
+        <main>
+            <div className="outer-content-container">
+                <div className="inner-content-container">
+                    <img className={styles.tree} src={Tree} alt="the tree of lord of the rings"/>
+                    <form className={styles.form} onSubmit={handleSubmit}>
+                        <label className={styles.field} htmlFor="username">
+                            <input className={styles.input}
+                                id="username"
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
+                                name="username"
+                                placeholder="Username"/>
+                        </label>
+                        <label className={styles.field} htmlFor="password">
+                            <input className={styles.input}
+                                id="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                name="password"
+                                placeholder="Password"/>
+                        </label>
+                        <button className={styles.signUp} type="submit">Log in</button>
+                    </form>
+                    <p className={styles.signedUp}>Not yet registered? <Link to="/signup">Sign up</Link></p>
+                </div>
+            </div>
+        </main>
     );
 }
 
