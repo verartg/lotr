@@ -105,7 +105,7 @@ function Testyourself2() {
                     },
                     {
                         "image": Boromir,
-                        "id": "5cd99d4bde30eff6ebccfc54"
+                        "id": "5cd99d4bde30eff6ebccfc57"
                     },
                     {
                         "image": Celeborn,
@@ -268,8 +268,8 @@ function Testyourself2() {
             {error && <span>Er is iets misgegaan met het ophalen van de data</span>}
             {loading && <span>Loading...</span>}
             <div onClick={() => setClicked(clicked + 1)}>
-                <img src={image} alt="image character"/>
-                {clicked === 1 && <CharacterInformation character={character}/>}
+                <CharacterInformation image src={image}/>
+                {clicked === 1 && <CharacterInformation image={image} character={character}/>}
                 {clicked === 2 && refreshPage()}
             </div>
         </>

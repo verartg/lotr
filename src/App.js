@@ -23,8 +23,8 @@ function App() {
                 <Route path="/characters" element={isAuth ? <Layout backgroundColor="#253021"><Characters/></Layout> : <Navigate to="/signup"/>}/>
                 <Route path="/character/:characterId" element={isAuth ? <Layout backgroundColor="#2D2E2D"><Character/></Layout> : <Navigate to="/signup"/>}/>
                 <Route path="/quotes" element={isAuth ? <Layout backgroundColor="#deeade"> <Quotes/> </Layout> : <Navigate to="/signup"/>}/>
-                <Route path="/testyourself" element={isAuth ? <Layout backgroundColor="#6B6B6B"><Testyourself/></Layout> : <Navigate to="/signup"/>}/>
-                <Route path="/testyourself2" element={isAuth ? <Layout backgroundColor="#6B6B6B"><Testyourself2/></Layout> : <Navigate to="/signup"/>}/>
+                <Route path="/testyourself" element={isAuth ? <Layout backgroundColor="#2D2E2D"><Testyourself/></Layout> : <Navigate to="/signup"/>}/>
+                <Route path="/testyourself2" element={isAuth ? <Layout backgroundColor="#2D2E2D"><Testyourself2/></Layout> : <Navigate to="/signup"/>}/>
                 <Route path="*" element={<Layout backgroundColor="#EEE8E9"><Notfound/></Layout>}/>
             </Routes>
     );
