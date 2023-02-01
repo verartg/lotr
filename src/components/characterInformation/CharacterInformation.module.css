@@ -13,7 +13,7 @@
     flex-direction: column;
     justify-content: space-around;
     border-radius: 15px;
-    box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.25);
+    box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.25);
 }
 
 .headerCard {
@@ -22,14 +22,15 @@
     background-color: var(--yellow);
     display: flex;
     justify-content: center;
-    padding-top: 120px;
-    padding-bottom: 20px;
+    padding-top: 170px;
     position: relative;
 }
 
 .name {
-    color: var(--beige);
+    color: white;
     font-weight: 400;
+    position: absolute;
+    top: 125px;
 }
 
 .infoCard {
@@ -37,6 +38,8 @@
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     padding: 25px;
+    min-height: 250px;
+    position: relative;
 }
 
 th {
@@ -55,5 +58,8 @@ table {
 .link {
     text-align: center;
     font-size: 14px;
-    margin-top: 27px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
 }

@@ -46,6 +46,10 @@ import Thranduil from "../../assets/characterImages/Thranduil.webp";
 import Treebeard from "../../assets/characterImages/Treebeard.webp";
 import axios from "axios";
 import CharacterInformation from "../../components/characterInformation/CharacterInformation";
+import {Link} from "react-router-dom";
+import arrowback from "../../assets/arrowback.svg";
+import styles from "../character/Character.module.css";
+
 function Testyourself2() {
     const [image, setImage] = useState();
     const [error, toggleError] = useState(false);
@@ -58,6 +62,7 @@ function Testyourself2() {
             'Accept': 'application/json',
             'Authorization': 'Bearer FD_28OTI7VOOTV6kadUH'
         }
+
         async function getImage() {
             toggleLoading(true);
             try {
@@ -265,13 +270,23 @@ function Testyourself2() {
 //onClick functie aanroepen ID meegeven getRequest
     return (
         <>
-            {error && <span>Er is iets misgegaan met het ophalen van de data</span>}
-            {loading && <span>Loading...</span>}
-            <div onClick={() => setClicked(clicked + 1)}>
-                <CharacterInformation image src={image}/>
-                {clicked === 1 && <CharacterInformation image={image} character={character}/>}
-                {clicked === 2 && refreshPage()}
-            </div>
+            <header className="outer-content-container">
+                <div className="inner-content-container">
+                    <Link to="/characters"><img src={arrowback} alt="arrow to go back"
+                                                className={styles.filter}/></Link>
+                </div>
+            </header>
+            <main className="outer-content-container">
+                <div className="inner-content-container">
+                    {error && <span>Er is iets misgegaan met het ophalen van de data</span>}
+                    {loading && <span>Loading...</span>}
+                    <div onClick={() => setClicked(clicked + 1)}>
+                        {clicked === 0 && <CharacterInformation image={image}/>}
+                        {clicked === 1 && <CharacterInformation image={image} character={character}/>}
+                        {clicked === 2 && refreshPage()}
+                    </div>
+                </div>
+            </main>
         </>
     );
 }

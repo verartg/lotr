@@ -1,8 +1,4 @@
-import React, {useEffect, useState} from 'react';
-import sauronseye from '../../assets/sauronseye.jpg'
 import styles from './CharacterInformation.module.css'
-import FrodoBaggins from '../../assets/characterImages/FrodoBaggins.webp'
-
 
 const CharacterInformation = ({character = {}, image } ) => {
 
@@ -10,7 +6,6 @@ const CharacterInformation = ({character = {}, image } ) => {
         <div className={styles.card}>
             <div className={styles.headerCard}>
                 <img src={image} className={styles.sauron} alt="photo of character"/>
-                {/*if character.id === 034029348 setImage */}
                 <h2 className={styles.name}>{character.name}</h2>
             </div>
             <div className={styles.infoCard}>

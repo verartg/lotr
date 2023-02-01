@@ -224,7 +224,6 @@ console.log(characterId)
             </header>
             <main className="outer-content-container">
                 <div className="inner-content-container">
-
                     {error && <span>Er is iets misgegaan met het ophalen van de data</span>}
                     {loading && <span>Loading...</span>}
                     <CharacterInformation character={character} image={image}/>
