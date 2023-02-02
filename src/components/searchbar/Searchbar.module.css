@@ -1,0 +1,7 @@
+.barstyle {
+    width: 100%;
+    background: var(--beige);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+}

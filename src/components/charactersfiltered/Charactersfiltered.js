@@ -1,20 +1,18 @@
-import './Charactersfiltered.module.css'
+import styles from './Charactersfiltered.module.css'
 import {Link} from "react-router-dom";
 
 const CharactersFiltered = ({characters = []}) => {
     return (
-        <div className="cards">
+        <section className={styles.cardContainer}>
             {characters && characters.map((character) => {
                 const {_id} = character
                 return (
-                    <div>
                         <Link to={`/character/${_id}`}>
-                            <p className="card" key={_id}>{character.name}</p>
+                            <article className={styles.card} key={_id}>{character.name}</article>
                         </Link>
-                    </div>
                 );
             })}
-        </div>
+        </section>
     );
 };
 

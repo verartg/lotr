@@ -3,7 +3,6 @@
 // ik set Race en Realm niet(ik weet niet hoe), waardoor ik soms niet kan clearen. dit is het geval wanneer er geen realm/race te kiezen valt. dan ververst 'ie niet.
 //I probably need to use more components.
 //I need pagination
-//accenten gevoeligheid uitzetten.
 import styles from './Characters.module.css';
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
@@ -11,7 +10,7 @@ import {IoArrowBackOutline} from "react-icons/io5";
 import {Link} from "react-router-dom";
 import SearchBar from "../../components/searchbar/Searchbar";
 import CharactersFiltered from "../../components/charactersfiltered/Charactersfiltered";
-import FilterMenu from "../../components/filtermenu/FilterMenu";
+import arrowback from "../../assets/arrowback.svg";
 
 const Characters = () => {
     const [characters, setCharacters] = useState([]);
@@ -45,7 +44,8 @@ const Characters = () => {
         }
         toggleLoading(false);
     }
-console.log(characters);
+
+    console.log(characters);
 
     useEffect(() => {
         getData();
@@ -69,11 +69,17 @@ console.log(characters);
 
     const updateKeyword = (keyword) => {
         const filtered = allCharacters.filter(character => {
-            return `${character.name.toLowerCase()}`.includes(keyword.toLowerCase())
+            return `${character.name.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, "")}`.includes(keyword.toLowerCase())
         });
+        const string = "Ça été Mičić. ÀÉÏÓÛ";
+        console.log(string);
+
+        const string_norm = string.normalize('NFD').replace(/\p{Diacritic}/gu, ""); // Old method: .replace(/[\u0300-\u036f]/g, "");
+        console.log(string_norm);
         setKeyword(keyword);
         setCharacters(filtered);
     }
+
 // console.log(keyword)
     function updateRace(e) {
         const filtered = allCharacters.filter(character => {
@@ -81,6 +87,7 @@ console.log(characters);
         });
         setCharacters(filtered);
     }
+
     // console.log(race);
 //deze console geeft niks terug
 
@@ -117,23 +124,35 @@ console.log(characters);
         <>
             {error && <span>Er is iets misgegaan met het ophalen van de data</span>}
             {loading && <span>Loading...</span>}
-            <Link to="/"><IoArrowBackOutline/></Link>
-            <SearchBar keyword={keyword} onChange={updateKeyword}/>
-            {/*<FilterMenu value='' keyRace={keyRace} onChange={updateRace}/>*/}
+            <header className="outer-content-container">
+                <div className="inner-content-container">
+                    <Link to="/characters"><img src={arrowback} alt="arrow to go back"
+                                                className={styles.arrow}/></Link>
+                </div>
+            </header>
+            <main className="outer-content-container">
+                <div className="inner-content-container">
 
-            <select value='' onChange={e => updateRace(e.target.value)}>
-                {races.map((race) => (
-                    <option value={race}>{race}</option>
-                ))}
-            </select>
+                        <SearchBar keyword={keyword} onChange={updateKeyword}/>
+                        {/*<FilterMenu value='' keyRace={keyRace} onChange={updateRace}/>*/}
+                        <div className={styles.filters}>
+                            <select value='' onChange={e => updateRace(e.target.value)} className={styles.filter}>
+                                {races.map((race) => (
+                                    <option value={race}>{race}</option>
+                                ))}
+                            </select>
+                            <select value='' onChange={e => updateRealm(e.target.value)} className={styles.filter}>
+                                {realms.map((realm) => (
+                                    <option value={realm}>{realm}</option>
+                                ))}
+                            </select>
 
-            <select value='' onChange={e => updateRealm(e.target.value)}>
-                {realms.map((realm) => (
-                    <option value={realm}>{realm}</option>
-                ))}
-            </select>
-            <button onClick={clearFilters}>Clear All filters</button>
-            <CharactersFiltered characters={characters}/>
+                        </div>
+                        <button onClick={clearFilters}>Clear All filters</button>
+
+                    <CharactersFiltered characters={characters}/>
+                </div>
+            </main>
         </>
     );
 }

@@ -1,0 +1,19 @@
+.arrow {
+    width: 25px;
+}
+
+.filters {
+    display: flex;
+    flex-shrink: 1;
+    justify-content: space-between;
+}
+
+.filter {
+    width: 47%;
+    background-color: var(--beige);
+    height: 40px;
+    border: none;
+    margin: 15px 0;
+    border-radius: 4px;
+}
+
