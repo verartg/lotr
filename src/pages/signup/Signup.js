@@ -26,6 +26,7 @@ function Signup() {
             console.log(e.response)
         } catch (e) {
             console.error(e)
+            console.log(e.response)
             //stukje state aanmaken om de errors in de ui te loggen.
         }
     }

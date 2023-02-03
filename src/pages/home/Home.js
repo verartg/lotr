@@ -27,7 +27,9 @@ function Home() {
             <main>
                 <div className="outer-content-container">
                     <div className="inner-content-container">
-                        <img className="logo" src={lotrlogo} alt="Lord of the Rings logo"/>
+                        <div className={styles.logo}>
+                        <img src={lotrlogo} alt="Lord of the Rings logo"/>
+                        </div>
                         <section className={styles.menu}>
                             <Button backgroundColor="#efebec" uri={"/characters"}>
                                 <p>Characters</p>

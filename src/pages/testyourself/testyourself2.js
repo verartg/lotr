@@ -1,5 +1,3 @@
-//name meegeven in object voor alt img
-
 import React, {useEffect, useState} from 'react';
 import Aragorn from "../../assets/characterImages/Aragorn.jpg";
 import Arwen from "../../assets/characterImages/Arwen.webp";
@@ -258,16 +256,13 @@ function Testyourself2() {
             }
             toggleLoading(false);
         }
-
         getImage();
-
     }, []);
 
     function refreshPage() {
         window.location.reload(false);
     }
 
-//onClick functie aanroepen ID meegeven getRequest
     return (
         <>
             <header className="outer-content-container">

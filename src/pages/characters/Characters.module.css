@@ -9,11 +9,27 @@
 }
 
 .filter {
-    width: 47%;
+    width: 46%;
     background-color: var(--beige);
     height: 40px;
     border: none;
     margin: 15px 0;
     border-radius: 4px;
+    color: var(--dark-grey);
+    padding: 7px;
 }
 
+.clear {
+    width: 95px;
+    align-self: end;
+    font-size: 12px;
+    border-style: none;
+    border-radius: 2px;
+}
+
+.filterblock {
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}

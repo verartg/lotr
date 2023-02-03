@@ -18,10 +18,10 @@ const Characters = () => {
     const [error, toggleError] = useState(false);
     const [loading, toggleLoading] = useState(false);
     const [keyword, setKeyword] = useState('');
-    const [race, setRace] = useState(null);
+    const [race, setRace] = useState("default");
     const [realms, setRealms] = useState([]);
     const [races, setRaces] = useState([]);
-    const [realm, setRealm] = useState(null);
+    const [realm, setRealm] = useState("default");
 
     const headers = {
         'Accept': 'application/json',
@@ -71,11 +71,6 @@ const Characters = () => {
         const filtered = allCharacters.filter(character => {
             return `${character.name.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, "")}`.includes(keyword.toLowerCase())
         });
-        const string = "Ça été Mičić. ÀÉÏÓÛ";
-        console.log(string);
-
-        const string_norm = string.normalize('NFD').replace(/\p{Diacritic}/gu, ""); // Old method: .replace(/[\u0300-\u036f]/g, "");
-        console.log(string_norm);
         setKeyword(keyword);
         setCharacters(filtered);
     }
@@ -113,7 +108,6 @@ const Characters = () => {
 //         )
 //     }, [race, realm])
 
-//this function clearFilters is not working... I also need to refresh the list when all the filters are cleared.
     const clearFilters = () => {
         setRace('')
         setRealm('')
@@ -132,24 +126,30 @@ const Characters = () => {
             </header>
             <main className="outer-content-container">
                 <div className="inner-content-container">
-
-                        <SearchBar keyword={keyword} onChange={updateKeyword}/>
-                        {/*<FilterMenu value='' keyRace={keyRace} onChange={updateRace}/>*/}
-                        <div className={styles.filters}>
-                            <select value='' onChange={e => updateRace(e.target.value)} className={styles.filter}>
-                                {races.map((race) => (
-                                    <option value={race}>{race}</option>
-                                ))}
-                            </select>
-                            <select value='' onChange={e => updateRealm(e.target.value)} className={styles.filter}>
-                                {realms.map((realm) => (
-                                    <option value={realm}>{realm}</option>
-                                ))}
-                            </select>
-
-                        </div>
-                        <button onClick={clearFilters}>Clear All filters</button>
-
+                    <div className={styles.filterblock}>
+                    <SearchBar keyword={keyword} onChange={updateKeyword}/>
+                    <div className={styles.filters}>
+                        <select defaultValue={race} onChange={e => updateRace(e.target.value)}
+                                className={styles.filter}>
+                            {races.map((race) => (
+                                <option value={race}>{race}</option>
+                            ))}
+                            <option value="default" disabled hidden>
+                                Race
+                            </option>
+                        </select>
+                        <select defaultValue={realm} onChange={e => updateRealm(e.target.value)}
+                                className={styles.filter}>
+                            {realms.map((realm) => (
+                                <option value={realm}>{realm}</option>
+                            ))}
+                            <option value="default" disabled hidden>
+                                Realm
+                            </option>
+                        </select>
+                    </div>
+                    <button onClick={clearFilters} className={styles.clear}>Clear All filters</button>
+                    </div>
                     <CharactersFiltered characters={characters}/>
                 </div>
             </main>

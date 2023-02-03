@@ -39,9 +39,9 @@
     margin: 2px 5px;
 }
 
-::placeholder {
-    color: var(--beige);
-}
+/*::placeholder {*/
+/*    color: var(--beige);*/
+/*}*/
 
 input:focus::placeholder {
     opacity: 0.5;
@@ -50,7 +50,7 @@ input:focus::placeholder {
 input:focus {
     border: none;
     outline: none;
-    background-color: var(--blue);
+    background-color: inherit;
 }
 
 .signedUp {
