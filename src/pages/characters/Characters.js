@@ -11,6 +11,7 @@ import {Link} from "react-router-dom";
 import SearchBar from "../../components/searchbar/Searchbar";
 import CharactersFiltered from "../../components/charactersfiltered/Charactersfiltered";
 import arrowback from "../../assets/arrowback.svg";
+import Header from "../../components/header/Header";
 
 const Characters = () => {
     const [characters, setCharacters] = useState([]);
@@ -116,14 +117,9 @@ const Characters = () => {
 
     return (
         <>
-            {error && <span>Er is iets misgegaan met het ophalen van de data</span>}
+            {error && <span>Something went wrong with retrieving the data</span>}
             {loading && <span>Loading...</span>}
-            <header className="outer-content-container">
-                <div className="inner-content-container">
-                    <Link to="/characters"><img src={arrowback} alt="arrow to go back"
-                                                className={styles.arrow}/></Link>
-                </div>
-            </header>
+            <Header uri="/"></Header>
             <main className="outer-content-container">
                 <div className="inner-content-container">
                     <div className={styles.filterblock}>
@@ -131,8 +127,8 @@ const Characters = () => {
                     <div className={styles.filters}>
                         <select defaultValue={race} onChange={e => updateRace(e.target.value)}
                                 className={styles.filter}>
-                            {races.map((race) => (
-                                <option value={race}>{race}</option>
+                            {races.map((race, i) => (
+                                <option value={race} key={i}>{race}</option>
                             ))}
                             <option value="default" disabled hidden>
                                 Race
@@ -140,8 +136,8 @@ const Characters = () => {
                         </select>
                         <select defaultValue={realm} onChange={e => updateRealm(e.target.value)}
                                 className={styles.filter}>
-                            {realms.map((realm) => (
-                                <option value={realm}>{realm}</option>
+                            {realms.map((realm, i) => (
+                                <option value={realm} key={i}>{realm}</option>
                             ))}
                             <option value="default" disabled hidden>
                                 Realm

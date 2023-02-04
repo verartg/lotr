@@ -15,6 +15,6 @@ const CharactersFiltered = ({characters = []}) => {
             })}
         </section>
     );
-};
+}
 
 export default CharactersFiltered;

@@ -9,6 +9,7 @@ import Tree from "../../assets/Tree.jpg";
 function Login() {
     const [password, setPassword] = useState("");
     const [username, setUsername] = useState("");
+    const [error, setError] = useState("");
     const {login} = useContext(AuthContext);
 
     async function handleSubmit(e) {
@@ -18,12 +19,10 @@ function Login() {
                 username: username,
                 password: password,
             })
-            // console.log(response)
-            console.log(e.response)
             login(response.data.accessToken)
         } catch (e) {
-            console.error(e)
-            //stukje state aanmaken om de errors in de ui te loggen.
+            console.error(e.response)
+            setError("Username and/or password not recognised")
         }
     }
 
@@ -49,6 +48,7 @@ function Login() {
                                 name="password"
                                 placeholder="Password"/>
                         </label>
+                        <p className={styles.error}>{error}</p>
                         <button className={styles.signUp} type="submit">Log in</button>
                     </form>
                     <p className={styles.signedUp}>Not yet registered? <Link to="/signup">Sign up</Link></p>

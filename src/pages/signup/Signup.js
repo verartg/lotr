@@ -11,6 +11,9 @@ function Signup() {
     const [username, setUsername] = useState("");
     const [role, setRole] = useState("user");
     const navigate = useNavigate();
+    const [emailError, setEmailError] = useState("");
+    const [usernameError, setUsernameError] = useState("");
+    const [passwordError, setPasswordError] = useState("");
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -21,16 +24,22 @@ function Signup() {
                 password: password,
                 role: role
             })
-            console.log(response)
             navigate("/login")
-            console.log(e.response)
         } catch (e) {
             console.error(e)
-            console.log(e.response)
-            //stukje state aanmaken om de errors in de ui te loggen.
+            console.log(e.response.data.message)
+            if (!email.includes("@") ) {
+                setEmailError("Emailadress invalid")
+            }
+            if (username.length < 6) {
+                setUsernameError("Username requires at least 6 characters")
+            }
+            if (password.length < 6) {
+                setPasswordError("Password requires at least 6 characters")
+            }
+            else setUsernameError(e.response.data.message)
         }
     }
-
 
     return (
         <main>
@@ -38,7 +47,6 @@ function Signup() {
                 <div className="inner-content-container">
                     <img className={styles.tree} src={Tree} alt="the tree of lord of the rings"/>
                     <form className={styles.form} onSubmit={handleSubmit}>
-                        {/*<Inputlabel htmlFor="username" id="username" value={username} setUsername={e.target.value} name="username" placeholder="Username"></Inputlabel>*/}
                         <label className={styles.field} htmlFor="username">
                             <input className={styles.input}
                                    id="username"
@@ -47,6 +55,7 @@ function Signup() {
                                    name="username"
                                    placeholder="Username"/>
                         </label>
+                        <p className={styles.errorUser}>{usernameError}</p>
                         <label className={styles.field} htmlFor="email">
                             <input className={styles.input}
                                    id="email"
@@ -55,6 +64,7 @@ function Signup() {
                                    name="emailadress"
                                    placeholder="Emailadress"/>
                         </label>
+                        <p className={styles.errorEmail}>{emailError}</p>
                         <label className={styles.field} htmlFor="password">
                             <input className={styles.input}
                                    id="password"
@@ -64,6 +74,7 @@ function Signup() {
                                    placeholder="Password"
                             />
                         </label>
+                        <p className={styles.errorPassword}>{passwordError}</p>
                         <button className={styles.signUp} type="submit">Register</button>
                     </form>
                     <p className={styles.signedUp}>Already have an account? <Link to="/login">Log in</Link></p>

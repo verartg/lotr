@@ -4,7 +4,7 @@ import axios from "axios";
 import tolkien from '../../assets/jrrtolkien.png';
 import footerfellowship from '../../assets/footerfellowship.png';
 import styles from './Quotes.module.css';
-import arrowback from '../../assets/arrowback.svg'
+import Header from "../../components/header/Header";
 
 function Quotes() {
     const [error, toggleError] = useState(false);
@@ -52,11 +52,7 @@ function Quotes() {
 
     return (
         <>
-            <header className="outer-content-container">
-                <div className="inner-content-container">
-                    <Link to="/"><img src={arrowback} alt="arrow to go back" className={styles.arrow}/></Link>
-                </div>
-            </header>
+            <Header uri="/"></Header>
             <main>
                 <div className="outer-content-container">
                     <div className="inner-content-container">

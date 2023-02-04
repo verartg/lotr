@@ -47,6 +47,7 @@ import CharacterInformation from "../../components/characterInformation/Characte
 import {Link} from "react-router-dom";
 import arrowback from "../../assets/arrowback.svg";
 import styles from "../character/Character.module.css";
+import Header from "../../components/header/Header";
 
 function Testyourself2() {
     const [image, setImage] = useState();
@@ -265,12 +266,7 @@ function Testyourself2() {
 
     return (
         <>
-            <header className="outer-content-container">
-                <div className="inner-content-container">
-                    <Link to="/characters"><img src={arrowback} alt="arrow to go back"
-                                                className={styles.filter}/></Link>
-                </div>
-            </header>
+            <Header uri="/testyourself"></Header>
             <main className="outer-content-container">
                 <div className="inner-content-container">
                     {error && <span>Er is iets misgegaan met het ophalen van de data</span>}

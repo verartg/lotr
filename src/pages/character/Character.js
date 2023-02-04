@@ -48,6 +48,7 @@ import Théoden from "../../assets/characterImages/Théoden.jpg";
 import Thorin from "../../assets/characterImages/Thorin.webp";
 import Thranduil from "../../assets/characterImages/Thranduil.webp";
 import Treebeard from "../../assets/characterImages/Treebeard.webp";
+import Header from "../../components/header/Header";
 
 function Character() {
     const {characterId} = useParams();
@@ -216,12 +217,7 @@ function Character() {
 console.log(characterId)
     return (
         <>
-            <header className="outer-content-container">
-                <div className="inner-content-container">
-                    <Link to="/characters"><img src={arrowback} alt="arrow to go back"
-                                                className={styles.filter}/></Link>
-                </div>
-            </header>
+            <Header uri="/characters"></Header>
             <main className="outer-content-container">
                 <div className="inner-content-container">
                     {error && <span>Er is iets misgegaan met het ophalen van de data</span>}
