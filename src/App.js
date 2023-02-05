@@ -11,7 +11,9 @@ import {useContext} from "react";
 import {AuthContext} from "./context/AuthContext";
 import Testyourself2 from "./pages/testyourself/testyourself2";
 import './App.css';
-import Layout from "./layout";
+import Layout from "../src/components/layout/Layout";
+
+console.log(process.env.REACT_APP_LOTR_API_KEY)
 function App() {
     const {isAuth} = useContext(AuthContext);
 

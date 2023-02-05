@@ -1,4 +1,3 @@
-/*<img/> er moet nog een onclick, dropdownmenu met uitlog knop komen*/
 import React, {useContext} from 'react';
 import {AuthContext} from "../../context/AuthContext";
 import './Home.module.css';
@@ -28,7 +27,7 @@ function Home() {
                 <div className="outer-content-container">
                     <div className="inner-content-container">
                         <div className={styles.logo}>
-                        <img src={lotrlogo} alt="Lord of the Rings logo"/>
+                            <img src={lotrlogo} alt="Lord of the Rings logo"/>
                         </div>
                         <section className={styles.menu}>
                             <Button backgroundColor="#efebec" uri={"/characters"}>

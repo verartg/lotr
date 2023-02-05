@@ -1,10 +1,9 @@
 import React, {useContext, useState} from 'react';
-import {Link, useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 import {AuthContext} from "../../context/AuthContext";
 import axios from "axios";
 import styles from "../signup/Signup.module.css"
 import Tree from "../../assets/Tree.jpg";
-
 
 function Login() {
     const [password, setPassword] = useState("");
@@ -34,19 +33,19 @@ function Login() {
                     <form className={styles.form} onSubmit={handleSubmit}>
                         <label className={styles.field} htmlFor="username">
                             <input className={styles.input}
-                                id="username"
-                                value={username}
-                                onChange={(e) => setUsername(e.target.value)}
-                                name="username"
-                                placeholder="Username"/>
+                                   id="username"
+                                   value={username}
+                                   onChange={(e) => setUsername(e.target.value)}
+                                   name="username"
+                                   placeholder="Username"/>
                         </label>
                         <label className={styles.field} htmlFor="password">
                             <input className={styles.input}
-                                id="password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                name="password"
-                                placeholder="Password"/>
+                                   id="password"
+                                   value={password}
+                                   onChange={(e) => setPassword(e.target.value)}
+                                   name="password"
+                                   placeholder="Password"/>
                         </label>
                         <p className={styles.error}>{error}</p>
                         <button className={styles.signUp} type="submit">Log in</button>

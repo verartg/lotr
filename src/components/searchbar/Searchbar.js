@@ -1,6 +1,6 @@
 import styles from './Searchbar.module.css'
-const SearchBar = ({keyword, onChange}) => {
 
+const SearchBar = ({keyword, onChange}) => {
     return (
         <input
             className={styles.barstyle}

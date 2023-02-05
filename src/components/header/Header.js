@@ -8,9 +8,9 @@ function Header({uri}) {
     return (
         <header className="outer-content-container">
             <div className="inner-content-container">
-        <Link to={uri}>
-            <img src={arrowback} alt="arrow to go back" className={styles.arrow}/>
-        </Link>
+                <Link to={uri}>
+                    <img src={arrowback} alt="arrow to go back" className={styles.arrow}/>
+                </Link>
             </div>
         </header>
     );

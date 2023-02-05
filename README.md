@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+![title](src/assets/title.png)
+![LordoftheRings](src/assets/LOTR.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Inleiding
+Voor de eindopdracht Frontend van Novi school heb ik een app ontwikkeld die informatie ophaalt over de boeken en films van Lord of the Rings. Ik ben dol op de Lord of the Rings boeken en films. Maar ik vergeet altijd wie wie ook alweer is. Daarom heb ik deze applicatie ontwikkeld waarin je informatie kan opvragen over de karakters en waarmee je kan oefenen wie wie is. Hiervoor heb ik gebruik gemaakt van [The One Api](https://the-one-api.dev/) die ik in een werkende en gestylde applicatie heb verwerkt.
+De applicatie is in eerste instantie gestyled voor smartphones, maar op grotere schermen werkt het ook. Veel plezier!
+![Eindresultaat](src/assets/screenshot.png)
 
-## Available Scripts
+Het project is opgezet met [Create React App](https://github.com/facebook/create-react-app).
 
-In the project directory, you can run:
+## Benodigdheden
+Om de informatie van The One API te krijgen, heb je een API key nodig. Deze kun je op hun website krijgen: https://the-one-api.dev/ en in de code te plaatsen op de plek van ${process.env.REACT_APP_LOTR_API_KEY}. Dit staat op meerdere pagina's.
 
-### `npm start`
+## De applicatie starten
+Als je het project gecloned hebt naar jouw locale machine, installeer je eerst de node_modules door het volgende commando in de terminal te runnen:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+`npm install`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Wanneer dit klaar is, kun je de applicatie starten met behulp van:
 
-### `npm test`
+`npm start`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+of gebruik de WebStorm knop (npm start). Open http://localhost:3000 om de pagina in de browser te bekijken.
 
-### `npm run build`
+Install axios?
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Inloggen
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Voor het opslaan van de gebruikersgegevens, is gebruik gemaakt van de [NOVI Educational Backend](https://github.com/hogeschoolnovi/novi-educational-backend-documentation/blob/main/README.md#0-test). Hier is geen API key voor nodig. 
+Dit is alleen bedoeld voor opleidings-doeleinden, daarom wordt de database met gebruikers vaak binnen één uur weer geleegd en kan het zijn dat je opnieuw een account moet aanmaken.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

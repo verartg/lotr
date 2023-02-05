@@ -48,7 +48,6 @@ footer {
     min-height: 100vh;
 }
 
-/* De buitenste container is altijd de volledige schermbreedte. Het is een flexbox container die zijn inhoud altijd netjes horizontaal centreert */
 .outer-content-container {
     width: 100%;
     display: flex;
@@ -56,15 +55,11 @@ footer {
     justify-content: center;
 }
 
-/*De binnenste container is maximaal 1400px breed, zodat het er ook goed uitziet op brede schermen.
-Hij mag krimpen als het scherm minder breed wordt, maar niet groeien als er meer ruimte is.*/
 .inner-content-container {
     flex-basis: 500px;
     flex-shrink: 1;
     flex-grow: 0;
-    /*We voegen margin toe aan de linker- en rechterkant, zodat de content nooit helemaal tegen de rand gedrukt kan worden*/
     margin: 0 40px;
-    /*We zorgen er ook voor dat deze flex-item op haar beurt ook weer een flexbox container is, waarin alle children onder elkaar komen te staan*/
     display: flex;
     flex-direction: column;
     justify-content: center;

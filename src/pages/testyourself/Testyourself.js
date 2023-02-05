@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import arrowback from "../../assets/arrowback.svg";
 import styles from "./Testyourself.module.css";
 import Header from "../../components/header/Header";
 

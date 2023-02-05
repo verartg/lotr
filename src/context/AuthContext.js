@@ -1,4 +1,3 @@
-//helperfunctie maken van unixtimestamp && Math.floor(Date.now()/1000) < decodedToken.exp
 import {createContext, useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import axios from "axios";
@@ -15,9 +14,8 @@ function AuthContextProvider({children}) {
 
     useEffect(() => {
         const storedToken = localStorage.getItem('token');
-        if ( storedToken ) {
-            console.log("De gebruiker is NOG STEEDS ingelogd!")
-            fetchUserData( storedToken )
+        if (storedToken) {
+            fetchUserData(storedToken)
 
         } else {
             toggleIsAuth({
@@ -30,7 +28,7 @@ function AuthContextProvider({children}) {
 
     function login(jwt) {
         localStorage.setItem('token', jwt)
-        fetchUserData( jwt, "/");
+        fetchUserData(jwt, "/");
     }
 
     async function fetchUserData(jwt, redirect) {
@@ -58,12 +56,10 @@ function AuthContextProvider({children}) {
                 user: null,
                 status: "done"
             });
-            //stukje state aanmaken om de errors in de ui te loggen.
         }
     }
 
     function logout() {
-        console.log("De gebruiker is uitgelogd!")
         localStorage.removeItem('token')
         toggleIsAuth({
             isAuth: false,
@@ -83,7 +79,7 @@ function AuthContextProvider({children}) {
 
     return (
         <AuthContext.Provider value={data}>
-            { isAuth.status === "done" ? children : <p>Loading...</p>}
+            {isAuth.status === "done" ? children : <p>Loading...</p>}
         </AuthContext.Provider>
     )
 }

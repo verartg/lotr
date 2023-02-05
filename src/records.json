@@ -1,0 +1,218 @@
+[
+  {
+    "image": "Aragorn",
+    "id": "5cd99d4bde30eff6ebccfbe6",
+    "icon": "Images/Aragorn.jpg"
+  },
+  {
+    "image": "Arwen",
+    "id": "5cd99d4bde30eff6ebccfc07",
+    "icon": "Images/Arwen.webp"
+  },
+  {
+    "image": "Azog",
+    "id": "5cdbdecb6dc0baeae48cfad4",
+    "icon": "Images/Azog.jpg"
+  },
+  {
+    "image": "Balin",
+    "id": "5cd99d4bde30eff6ebccfc1b",
+    "icon": "Images/Balin.webp"
+  },
+  {
+    "image": "BardII",
+    "id": "5cd99d4bde30eff6ebccfc22",
+    "icon": "Images/BarII.jpg"
+  },
+  {
+    "image": "Beorn",
+    "id": "5cd99d4bde30eff6ebccfc2c",
+    "icon": "Images/Beorn.webp"
+  },
+  {
+    "image": "Bifur",
+    "id": "5cd99d4bde30eff6ebccfc37",
+    "icon": "Images/Bifur.webp"
+  },
+  {
+    "image": "BilboBaggins",
+    "id": "5cd99d4bde30eff6ebccfc38",
+    "icon": "Images/BilboBaggins.webp"
+  },
+  {
+    "image": "Bofur",
+    "id": "5cd99d4bde30eff6ebccfc4f",
+    "icon": "Images/Bofur.webp"
+  },
+  {
+    "image": "Bombur",
+    "id": "5cd99d4bde30eff6ebccfc54",
+    "icon": "Images/Bombur.webp"
+  },
+  {
+    "image": "Boromir",
+    "id": "5cd99d4bde30eff6ebccfc57",
+    "icon": "Images/Boromir.webp"
+  },
+  {
+    "image": "Celeborn",
+    "id": "5cd99d4bde30eff6ebccfc7e",
+    "icon": "Images/Celeborn.webp"
+  },
+  {
+    "image": "DenethorII",
+    "id": "5cd99d4bde30eff6ebccfc9a",
+    "icon": "Images/DenethorII.webp"
+  },
+  {
+    "image": "Dori",
+    "id": "5cd99d4bde30eff6ebccfc9f",
+    "icon": "Images/Dori.webp"
+  },
+  {
+    "image": "Dwalin",
+    "id": "5cd99d4bde30eff6ebccfca4",
+    "icon": "Images/Dwalin.webp"
+  },
+  {
+    "image": "Elrond",
+    "id": "5cd99d4bde30eff6ebccfcc8",
+    "icon": "Images/Elrond.webp"
+  },
+  {
+    "image": "Éomer",
+    "id": "5cdbdecb6dc0baeae48cfa5a",
+    "icon": "Images/Éomer.webp"
+  },
+  {
+    "image": "Éowyn",
+    "id": "5cdbdecb6dc0baeae48cfa59",
+    "icon": "Images/Éowyn.webp"
+  },
+  {
+    "image": "Faramir",
+    "id": "5cd99d4bde30eff6ebccfcef",
+    "icon": "Images/Faramir.webp"
+  },
+  {
+    "image": "FíliandKíli",
+    "id": "5cd99d4bde30eff6ebccfd04",
+    "icon": "Images/FíliandKíli.jpg"
+  },
+  {
+    "image": "FrodoBaggins",
+    "id": "5cd99d4bde30eff6ebccfc15",
+    "icon": "Images/FrodoBaggins.webp"
+
+  },
+  {
+    "image": "Galadriel",
+    "id": "5cd99d4bde30eff6ebccfd06",
+    "icon": "Images/Galadriel.webp"
+  },
+  {
+    "image": "Gandalf",
+    "id": "5cd99d4bde30eff6ebccfea0",
+    "icon": "Images/Gandalf.webp"
+  },
+  {
+    "image": "Gimli",
+    "id": "5cd99d4bde30eff6ebccfd23",
+    "icon": "Images/Gimli.webp"
+  },
+  {
+    "image": "Glóin",
+    "id": "5cd99d4bde30eff6ebccfd2b",
+    "icon": "Images/Glóin.webp"
+  },
+  {
+    "image": "Gollum",
+    "id": "5cd99d4bde30eff6ebccfe9e",
+    "icon": "Images/Gollum.webp"
+  },
+  {
+    "image": "GreatGoblin",
+    "id": "5cdbdecb6dc0baeae48cfa95",
+    "icon": "Images/GreatGoblin.webp"
+  },
+  {
+    "image": "GrímaWormtongue",
+    "id": "5cd99d4bde30eff6ebccfe9d",
+    "icon": "Images/GrímaWormtongue.jpg"
+  },
+  {
+    "image": "Haldir_Lorien",
+    "id": "5cd99d4bde30eff6ebccfd42",
+    "icon": "Images/Haldir_Lorien.webp"
+  },
+  {
+    "image": "Legolas",
+    "id": "5cd99d4bde30eff6ebccfd81",
+    "icon": "Images/Legolas.jpeg"
+  },
+  {
+    "image": "MerryGamgee",
+    "id": "5cd99d4bde30eff6ebccfc7c",
+    "icon": "Images/MerryGamgee.webp"
+  },
+  {
+    "image": "Nori",
+    "id": "5cd99d4bde30eff6ebccfdc4",
+    "icon": "Images/Nori.webp"
+  },
+  {
+    "image": "Óin",
+    "id": "5cd99d4bde30eff6ebccfe55",
+    "icon": "Images/Óin.webp"
+  },
+  {
+    "image": "Ori",
+    "id": "5cd99d4bde30eff6ebccfdca",
+    "icon": "Images/Ori.webp"
+  },
+  {
+    "image": "PippinGamgee",
+    "id": "5cd99d4bde30eff6ebccfe2e",
+    "icon": "Images/PippinGamgee.webp"
+  },
+  {
+    "image": "Radagast",
+    "id": "5cd99d4bde30eff6ebccfea1",
+    "icon": "Images/Radagast.jpg"
+  },
+  {
+    "image": "SamwiseGamgee",
+    "id": "5cd99d4bde30eff6ebccfd0d",
+    "icon": "Images/SamwiseGamgee.jpg"
+  },
+  {
+    "image": "Saruman",
+    "id": "5cd99d4bde30eff6ebccfea4",
+    "icon": "Images/Saruman.jpg"
+  },
+  {
+    "image": "Smaug",
+    "id": "5cdbdecb6dc0baeae48cfa42",
+    "icon": "Images/Smaug.webp"
+  },
+  {
+    "image": "Théoden",
+    "id": "5cd99d4bde30eff6ebccfe19",
+    "icon": "Images/Théoden.jpg"
+  },
+  {
+    "image": "Thorin",
+    "id": "5cd99d4bde30eff6ebccfe15",
+    "icon": "Images/Thorin.webp"
+  },
+  {
+    "image": "Thranduil",
+    "id": "5cd99d4bde30eff6ebccfe13",
+    "icon": "Images/Thranduil.webp"
+  },
+  {
+    "image": "Treebeard",
+    "id": "5cd9d533844dc4c55e47afed",
+    "icon": "Images/Treebeard.webp"
+  }
+]

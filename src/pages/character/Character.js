@@ -1,9 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import {Link, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import axios from "axios";
 import CharacterInformation from "../../components/characterInformation/CharacterInformation";
-import arrowback from '../../assets/arrowback.svg';
-import styles from "./Character.module.css";
 import sauronseye from "../../assets/sauronseye.jpg";
 import Aragorn from "../../assets/characterImages/Aragorn.jpg";
 import Arwen from "../../assets/characterImages/Arwen.webp";
@@ -34,7 +32,7 @@ import Gollum from "../../assets/characterImages/Gollum.webp";
 import GreatGoblin from "../../assets/characterImages/GreatGoblin.webp";
 import GrímaWormtongue from "../../assets/characterImages/GrímaWormtongue.jpg";
 import Haldir_Lorien from "../../assets/characterImages/Haldir_Lorien.webp";
-import Legolas from "../../assets/characterImages/Legolas.jpg";
+import Legolas from "../../assets/characterImages/Legolas.jpeg";
 import MerryGamgee from "../../assets/characterImages/MerryGamgee.webp";
 import Nori from "../../assets/characterImages/Nori.webp";
 import Óin from "../../assets/characterImages/Óin.webp";
@@ -60,8 +58,9 @@ function Character() {
     useEffect(() => {
         const headers = {
             'Accept': 'application/json',
-            'Authorization': 'Bearer FD_28OTI7VOOTV6kadUH'
+            'Authorization': `Bearer ${process.env.REACT_APP_LOTR_API_KEY}`
         }
+
         async function getCharacter() {
             toggleLoading(true);
             try {
@@ -188,7 +187,7 @@ function Character() {
                     case "5cdbdecb6dc0baeae48cfa42":
                         setImage(Smaug)
                         break;
-                        case "5cd99d4bde30eff6ebccfe19":
+                    case "5cd99d4bde30eff6ebccfe19":
                         setImage(Théoden)
                         break;
                     case "5cd99d4bde30eff6ebccfe15":
@@ -214,13 +213,13 @@ function Character() {
             getCharacter();
         }
     }, []);
-console.log(characterId)
+
     return (
         <>
             <Header uri="/characters"></Header>
             <main className="outer-content-container">
                 <div className="inner-content-container">
-                    {error && <span>Er is iets misgegaan met het ophalen van de data</span>}
+                    {error && <span>Something went wrong with retrieving the data</span>}
                     {loading && <span>Loading...</span>}
                     <CharacterInformation character={character} image={image}/>
                 </div>

@@ -3,7 +3,6 @@ import axios from "axios";
 import {Link, useNavigate} from "react-router-dom";
 import Tree from '../../assets/Tree.jpg';
 import styles from './Signup.module.css';
-import Inputlabel from "../../components/inputlabel/Inputlabel";
 
 function Signup() {
     const [email, setEmail] = useState("");
@@ -28,7 +27,7 @@ function Signup() {
         } catch (e) {
             console.error(e)
             console.log(e.response.data.message)
-            if (!email.includes("@") ) {
+            if (!email.includes("@")) {
                 setEmailError("Emailadress invalid")
             }
             if (username.length < 6) {
@@ -36,8 +35,7 @@ function Signup() {
             }
             if (password.length < 6) {
                 setPasswordError("Password requires at least 6 characters")
-            }
-            else setUsernameError(e.response.data.message)
+            } else setUsernameError(e.response.data.message)
         }
     }
 
