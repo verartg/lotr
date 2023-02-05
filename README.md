@@ -22,8 +22,6 @@ Wanneer dit klaar is, kun je de applicatie starten met behulp van:
 
 of gebruik de WebStorm knop (npm start). Open http://localhost:3000 om de pagina in de browser te bekijken.
 
-Install axios?
-
 ## Inloggen
 
 Voor het opslaan van de gebruikersgegevens, is gebruik gemaakt van de [NOVI Educational Backend](https://github.com/hogeschoolnovi/novi-educational-backend-documentation/blob/main/README.md#0-test). Hier is geen API key voor nodig. 
